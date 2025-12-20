@@ -2,6 +2,8 @@ import os
 import uuid
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
+
 
 
 # CONFIGURACIÓN INICIAL
@@ -149,6 +151,7 @@ def home():
 @app.get("/health")
 def health():
     return {"status": "healthy"}, 200
+
 
 
 
