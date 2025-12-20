@@ -146,6 +146,10 @@ def home():
         "endpoints": ["/productos", "/productos/<id>"]
     }, 200
 
+@app.get("/health")
+def health():
+    return {"status": "healthy"}, 200
+
 
 
 
